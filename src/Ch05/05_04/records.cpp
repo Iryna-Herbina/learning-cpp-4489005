@@ -95,3 +95,14 @@ float StudentRecords::get_GPA(int sid) const{
         }
     return (points / credits);
 }
+
+std::string StudentRecords::report_card(int sid) const{
+    std::string report;
+    report = "Report Card for " + get_student_name(sid) + ": \n";
+    for (const Grade& grd : grades)
+        if (grd.get_student_id() == sid){
+            report += courses[grd.get_course_id() - 1].get_name() + " - " + grd.get_grade() + "\n";
+        }
+    report += "GPA: " + std::to_string(get_GPA(sid));
+    return report;
+}
