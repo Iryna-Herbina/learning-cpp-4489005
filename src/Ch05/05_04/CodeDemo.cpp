@@ -17,7 +17,7 @@ int main(){
     std::cout << "Enter a student ID: " << std::flush;
     std::cin >> id;
 
-    SR.report_card(id);
+    std::cout << SR.report_card(id) << std::endl;
     
     std::cout << std::endl << std::endl;
     return (0);
