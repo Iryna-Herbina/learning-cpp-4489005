@@ -34,6 +34,7 @@ private:
 
 int main(){
     cow my_cow("Hildy", 7, cow_purpose::pet);
+    my_cow.set_age(2);
     std::cout << my_cow.get_name() << " is a type-" << (int) my_cow.get_purpose() << " cow." << std::endl;
     std::cout << my_cow.get_name() << " is " << my_cow.get_age() << " years old." << std::endl;
     
